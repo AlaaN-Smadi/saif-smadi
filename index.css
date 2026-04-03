@@ -1,0 +1,414 @@
+:root {
+    --bg-color: #faf7f2;
+    --text-primary: #2c211b;
+    --text-sec: #5c4e46;
+    --primary-color: #d35400;
+    --primary-hover: #e67e22;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 40px rgba(211, 84, 0, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Beautiful Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(211, 84, 0, 0.85), rgba(192, 57, 43, 0.85)), url('https://images.unsplash.com/photo-1549552174-884ae079541a?q=80&w=2670&auto=format&fit=crop') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: var(--bg-color);
+    transform: skewY(-2deg);
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 10;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Sections as Accordions */
+.section {
+    margin-bottom: 30px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    cursor: pointer;
+    background: var(--card-bg);
+    transition: background 0.3s;
+}
+
+.section-header:hover {
+    background: #fcfbfa;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.section-desc {
+    color: var(--text-sec);
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+}
+
+.toggle-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(211, 84, 0, 0.08);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s;
+    margin-right: 20px; /* Arabic RTL */
+    flex-shrink: 0;
+}
+
+.section-header:hover .toggle-icon {
+    background: rgba(211, 84, 0, 0.15);
+}
+
+.section.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Accordion Content Grid Technique */
+.section-content-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 30px;
+}
+
+.section.active .section-content-wrapper {
+    grid-template-rows: 1fr;
+    padding-bottom: 40px;
+}
+
+.section-content {
+    overflow: hidden;
+}
+
+.section.active .cards-grid {
+    margin-top: 20px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push button to bottom */
+.term-card > div:last-of-type, .recipe-card > div:last-child {
+    margin-bottom: auto;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleY(0);
+    transition: var(--transition);
+    transform-origin: bottom;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card:hover::before {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card p {
+    color: var(--text-sec);
+    margin-bottom: 15px;
+}
+
+.term-card ul, .recipe-card ol {
+    margin-right: 20px;
+    color: var(--text-sec);
+}
+
+.term-card li, .recipe-card li {
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(211, 84, 0, 0.08);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.quote {
+    font-style: italic;
+    border-right: 4px solid var(--primary-color);
+    padding-right: 15px;
+    background: #fdfbf7;
+    padding: 12px 15px 12px 10px;
+    border-radius: 0 8px 8px 0;
+    color: var(--primary-color) !important;
+    font-weight: 500;
+}
+
+/* Use margin auto to push video button down */
+.steps {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.steps h4 {
+    margin: 20px 0 10px;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+/* Video Button */
+.video-btn {
+    display: block;
+    margin-top: auto;
+    padding: 12px 20px;
+    background: rgba(211, 84, 0, 0.1);
+    color: var(--primary-color);
+    border: 2px solid rgba(211, 84, 0, 0.2);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    text-align: center;
+    font-family: inherit;
+}
+
+.video-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(211, 84, 0, 0.2);
+}
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0,0,0,0.85); /* Semi-transparent dark */
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--primary-color);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+footer {
+    background: #2c211b;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .section-header {
+        padding: 20px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .toggle-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-content-wrapper {
+        padding: 0 20px;
+    }
+    .close-btn {
+        top: -40px;
+    }
+}
