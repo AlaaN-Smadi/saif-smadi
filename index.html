@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="دليلك الشامل لتحضير أشهر الصلصات في المطبخ الكلاسيكي - موسوعة الصلصات الأساسية والمشتقة">
-    <title>موسوعة الصلصات الكلاسيكية</title>
+    <title>الصلصات الفرنسية</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -14,82 +12,44 @@
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>موسوعة الصلصات الكلاسيكية</h1>
-            <p>مرحباً بك في دليلك الشامل لتحضير أشهر الصلصات في المطبخ الكلاسيكي. يمكنك التنقل بين الأقسام أدناه للتعرف
-                على الأساسيات والوصفات خطوة بخطوة.</p>
-            <p style="color: #b5bce7;font-weight: bold;">Student Work: Saif Al-Smadi<br>Course Instructor: Chef Hanadi</p>
+            <h1>الصلصات الفرنسية</h1>
         </div>
     </header>
 
     <main class="container">
-        <!-- مصطلحات أساسية -->
-        <section id="terminology" class="section">
-            <div class="section-header">
-                <div class="header-text">
-                    <h2 class="section-title">📌 مصطلحات أساسية</h2>
-                    <p class="section-desc">قبل الغوص في عالم الصلصات، إليك أهم التقنيات التي تُبنى عليها وصفاتنا:</p>
-                </div>
-                <div class="toggle-icon">
-                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="section-content-wrapper">
-                <div class="section-content">
-                    <div class="cards-grid">
-                        <div class="card term-card">
-                            <h3>1. الرو (Roux)</h3>
-                            <p>هو مزيج متساوٍ من الدهون (زبدة) والدقيق، يُطبخ على النار ويُستخدم كـ "عامل تكثيف" للصلصات
-                                والشوربات.</p>
-                            <ul>
-                                <li><strong>الرو الأبيض:</strong> يُطبخ لدقيقتين (يُستخدم للصلصات البيضاء).</li>
-                                <li><strong>الرو الأشقر:</strong> يُطبخ 3-5 دقائق للحصول على لون ذهبي (يُستخدم للمرق
-                                    الفاتح).</li>
-                                <li><strong>الرو البني:</strong> يُطبخ طويلاً للحصول على لون بني غامق (يُستخدم للصلصات
-                                    الداكنة).</li>
-                            </ul>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/SIYhQ4mMvPU">🎬
-                                شاهد
-                                شرح التقنية</button>
-                        </div>
-                        <div class="card term-card">
-                            <h3>2. السوتيه (Sauté)</h3>
-                            <p>تقنية "التشويح السريع" في مقلاة واسعة باستخدام كمية دهون قليلة وعلى حرارة عالية. تُحافظ
-                                هذه التقنية على قوام ولون الطعام وتُكرمل السكريات الطبيعية فيه.</p>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/hf6ypF78hZ8">🎬
-                                شاهد
-                                شرح التقنية</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- شريط التنقل -->
+        <nav class="navbar">
+            <button class="nav-item active" data-target="mother-sauces">الصلصات الأم</button>
+            <button class="nav-item" data-target="derivative-sauces">الصلصات الفرعية</button>
+            <button class="nav-item" data-target="references">المراجع</button>
+        </nav>
 
         <!-- الصلصات الأم -->
-        <section id="mother-sauces" class="section">
+        <div id="mother-sauces" class="tab-pane active">
             <div class="section-header">
-                <div class="header-text">
-                    <h2 class="section-title">🥣 الصلصات الأم (The Mother Sauces)</h2>
-                    <p class="section-desc">الأساس الذي تُبنى عليه جميع الصلصات الأخرى.</p>
+                <h2 class="section-title">الصلصات الأم </h2>
                 </div>
-                <div class="toggle-icon">
-                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="section-content-wrapper">
-                <div class="section-content">
-                    <div class="cards-grid">
-                        <!-- Béchamel -->
-                        <div class="card recipe-card">
-                            <h3>صوص البشاميل (Béchamel)</h3>
-                            <div class="badge">اساس: حليب + رو أبيض</div>
+            <div class="pro-list">
+                <!-- Béchamel -->
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/bechamel_sauce_1778540272321.png" alt="صوص البشاميل">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">صوص البشاميل </h3>
+                            <div class="item-actions">
+                                <span class="badge">حليب + رو أبيض</span>
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/shorts/aqxFTTcjah0"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                    </button>
+                            </div>
+                            </div>
+                        <div class="item-content">
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -99,13 +59,29 @@
                                     <li>تَبِّله بالملح، ورشة من جوزة الطيب.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/ERqkGJeVb1k">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Velouté -->
-                        <div class="card recipe-card">
-                            <h3>صوص الفيلوتيه (Velouté)</h3>
-                            <div class="badge">اساس: مرق فاتح + رو أشقر</div>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/veloute_sauce_1778540285185.png" alt="صوص الفيلوتيه">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">صوص الفيلوتيه </h3>
+                            <div class="item-actions">
+                                <span class="badge">مرق فاتح + رو أشقر</span>
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/watch?v=up0Di8KKm-k"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -114,13 +90,29 @@
                                     <li>يُطهى لمدة 15 دقيقة مع إزالة الرغوة، ثم يُتبل.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/watch?v=-3miekao3-E">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Espagnole -->
-                        <div class="card recipe-card">
-                            <h3>صوص الإسبانيول (Espagnole)</h3>
-                            <div class="badge">اساس: مرق لحم داكن + رو بني</div>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/espagnole_sauce_1778540297168.png" alt="صوص الإسبانيول">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">صوص الإسبانيول </h3>
+                            <div class="item-actions">
+                                <span class="badge">مرق لحم داكن + رو بني</span>
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/watch?v=pf0Ne3xIP0w"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -130,13 +122,29 @@
                                     <li>يُطهى ببطء لساعة كاملة ثم يُصفى.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/1vz3yA97fMI">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Tomate -->
-                        <div class="card recipe-card">
-                            <h3>صوص الطماطم (Tomate)</h3>
-                            <div class="badge">اساس: طماطم + مرق + خضار عطرية</div>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/tomato_sauce_1778540308209.png" alt="صوص الطماطم">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">صوص الطماطم </h3>
+                            <div class="item-actions">
+                                <span class="badge">طماطم + مرق + خضار عطرية</span>
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/watch?v=Amp3Z_047hc"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -145,13 +153,29 @@
                                     <li>تَبِّل المزيج واتركه يُطهى ببطء لمدة 45 دقيقة للتكثيف.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/U_KUqQmJcuA">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Hollandaise -->
-                        <div class="card recipe-card">
-                            <h3>صوص الهولنديز (Hollandaise)</h3>
-                            <div class="badge">اساس: مستحلب (صفار بيض + زبدة مذابة)</div>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/hollandaise_sauce_1778540319619.png" alt="صوص الهولنديز">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">صوص الهولنديز </h3>
+                            <div class="item-actions">
+                                <span class="badge">مستحلب (صفار بيض + زبدة)</span>
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/shorts/NsLD7IWYulA"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -160,39 +184,40 @@
                                     <li>تَبِّله وقدّمه فوراً.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/watch?v=yy4QfLXR5ek">🎬
-                                مشاهدة الوصفة</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- الصلصات المشتقة -->
-        <section id="derivative-sauces" class="section">
+        <!-- الصلصات الفرعية -->
+        <div id="derivative-sauces" class="tab-pane">
             <div class="section-header">
-                <div class="header-text">
-                    <h2 class="section-title">🥩 الصلصات المشتقة (Derivative Sauces)</h2>
-                    <p class="section-desc">صلصات كلاسيكية مشتقة من الأساس البني (الديمي غلاس)، مثالية للحوم والدواجن.
-                    </p>
+                <h2 class="section-title">الصلصات الفرعية </h2>
                 </div>
-                <div class="toggle-icon">
-                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="section-content-wrapper">
-                <div class="section-content">
-                    <div class="cards-grid">
-                        <!-- Robert -->
-                        <div class="card recipe-card">
-                            <h3>1. صوص روبير (Robert Sauce)</h3>
-                            <p class="quote">صوص بني مشتق ذو نكهة لاذعة، ممتاز مع اللحوم المشوية.</p>
-                            <p><strong>المقادير:</strong> زبدة، كراث/بصل، 1/2 كوب نبيذ أبيض (أو مرق مع خل)، 2 كوب ديمي
-                                غلاس، خردل ديجون.</p>
+            <div class="pro-list">
+                <!-- Robert -->
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/robert_sauce_1778540334760.png" alt="صوص روبير">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">1. صوص روبير </h3>
+                            <div class="item-actions">
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/shorts/zP13xQRCCaw"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                    </button>
+                            </div>
+                            </div>
+                        <div class="item-content">
+                            <p class="item-desc"><strong>المقادير:</strong> زبدة، كراث/بصل، 1/2 كوب نبيذ أبيض (أو مرق مع
+                                خل)، 2 كوب ديمي غلاس، خردل
+                                ديجون.</p>
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -202,15 +227,31 @@
                                     <li>ارفع القدر عن النار، وأضف الخردل واخفق (يجب ألا يغلي بعد إضافة الخردل).</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/HpvqPeT1KZE">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Diable -->
-                        <div class="card recipe-card">
-                            <h3>2. صوص ديابل (Diable Sauce)</h3>
-                            <p class="quote">صوص "الشيطان" الحار، رائع مع الدجاج المشوي واللحوم الحمراء.</p>
-                            <p><strong>المقادير:</strong> كراث أندلسي، خل نبيذ أبيض، فلفل أسود مجروش، ديمي غلاس، فلفل
-                                كايين (شطة).</p>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/diable_sauce_1778540347523.png" alt="صوص ديابل">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">2. صوص ديابل </h3>
+                            <div class="item-actions">
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/shorts/sUrgIWqz05w"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <p class="item-desc"><strong>المقادير:</strong> كراث أندلسي، خل نبيذ أبيض، فلفل أسود مجروش، ديمي
+                                غلاس، فلفل كايين (شطة).
+                            </p>
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -219,33 +260,65 @@
                                     <li>صَفِّ الصوص (اختياري) وأضف الشطة حسب الرغبة.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/watch?v=PWvzjGhLkLI">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Bordelaise -->
-                        <div class="card recipe-card">
-                            <h3>3. صوص بوردليز (Bordelaise Sauce)</h3>
-                            <p class="quote">صوص فرنسي فخم وغني، الرفيق المثالي لشرائح الستيك الفاخرة.</p>
-                            <p><strong>المقادير:</strong> زبدة، كراث، نبيذ أحمر (أو عصير عنب غير محلى مع خل)، زعتر وغار،
-                                ديمي غلاس، نخاع عظم (اختياري).</p>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/bordelaise_sauce_1778540359864.png" alt="صوص بوردليز">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">3. صوص بوردليز </h3>
+                            <div class="item-actions">
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/shorts/2FdPIY_KtRI"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <p class="item-desc"><strong>المقادير:</strong> زبدة، كراث، نبيذ أحمر (أو عصير عنب غير محلى مع
+                                خل)، زعتر وغار، ديمي
+                                غلاس، نخاع عظم (اختياري).</p>
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
                                     <li>اغلِ البصل، السائل الحمضي، والأعشاب حتى يتبخر ويتبقى مقدار ملعقتين فقط.</li>
                                     <li>أضف الديمي غلاس واغله ببطء لمدة 20 دقيقة.</li>
                                     <li>صَفِّ الصوص بمصفاة دقيقة.</li>
-                                    <li>أضف نخاع العظم الساخن، ثم ارفعه عن النار واخفق الزبدة الباردة معه للحصول على
-                                        لمعان.</li>
+                                    <li>أضف نخاع العظم الساخن، ثم ارفعه عن النار واخفق الزبدة الباردة معه للحصول على لمعان.
+                                    </li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/uWDrhduEV08">🎬
-                                مشاهدة الوصفة</button>
+                        </div>
+                        </div>
                         </div>
                         <!-- Mushroom -->
-                        <div class="card recipe-card">
-                            <h3>4. صوص المشروم (Mushroom Sauce)</h3>
-                            <p class="quote">صوص ترابي غني بالنكهات، يرافق البرغر والدواجن بشكل مثالي.</p>
-                            <p><strong>المقادير:</strong> فطر طازج، كراث، ثوم، ديمي غلاس، كريمة طبخ (اختياري)، زبدة.</p>
+                <div class="pro-item">
+                    <div class="item-image">
+                        <img src="images/mushroom_sauce_1778540372504.png" alt="صوص المشروم">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">4. صوص المشروم </h3>
+                            <div class="item-actions">
+                                <button class="video-btn-pro" data-video-src="https://www.youtube.com/shorts/xJ5-LmZxvEY"
+                                    title="مشاهدة الوصفة">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                    <span>عرض طريقة التحضير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <p class="item-desc"><strong>المقادير:</strong> فطر طازج، كراث، ثوم، ديمي غلاس، كريمة طبخ
+                                (اختياري)، زبدة.</p>
                             <div class="steps">
                                 <h4>الخطوات:</h4>
                                 <ol>
@@ -255,52 +328,71 @@
                                     <li>أضف الكريمة في النهاية إذا رغبت بقوام أغنى ولون أفتح.</li>
                                 </ol>
                             </div>
-                            <button class="video-btn" data-video-src="https://www.youtube.com/shorts/K10NWxPJuvY">🎬
-                                مشاهدة الوصفة</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- المراجع -->
-        <section id="references" class="section">
+        <div id="references" class="tab-pane">
             <div class="section-header">
-                <div class="header-text">
-                    <h2 class="section-title">📚 المراجع (References)</h2>
-                    <p class="section-desc">المصادر التي تم الاستعانة بها لإعداد هذه الموسوعة:</p>
+                <h2 class="section-title">المراجع </h2>
                 </div>
-                <div class="toggle-icon">
-                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                
+                <div class="pro-list references-list">
+                    <div class="pro-item">
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h3 class="item-title">Food Today</h3>
+                                <div class="item-actions">
+                                    <span class="badge">موقع طبخ</span>
+                                    <a href="https://www.foodtodayeg.com" target="_blank" class="link-btn-pro">
+                                        <span>زيارة الموقع</span>
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                            <path
+                                                d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-10 4v14h14v-7h-2v5H6V9h5V7H4z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-            </div>
-
-            <div class="section-content-wrapper">
-                <div class="section-content">
-                    <div class="cards-grid">
-                        <div class="card term-card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px;">
-                            <h3>Food Today</h3>
-                            <a href="https://www.foodtodayeg.com" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background: rgba(211, 84, 0, 0.1); color: var(--primary-color); border: 2px solid rgba(211, 84, 0, 0.2); border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; width: 100%;">زيارة الموقع 🌐</a>
-                        </div>
-                        <div class="card term-card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px;">
-                            <h3>Super Mama</h3>
-                            <a href="https://www.supermama.me" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background: rgba(211, 84, 0, 0.1); color: var(--primary-color); border: 2px solid rgba(211, 84, 0, 0.2); border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; width: 100%;">زيارة الموقع 🌐</a>
-                        </div>
-                        <div class="card term-card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px;">
-                            <h3>Hellooha</h3>
-                            <a href="https://www.hellooha.com" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background: rgba(211, 84, 0, 0.1); color: var(--primary-color); border: 2px solid rgba(211, 84, 0, 0.2); border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; width: 100%;">زيارة الموقع 🌐</a>
+                <div class="pro-item">
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">Super Mama</h3>
+                            <div class="item-actions">
+                                <span class="badge">موقع طبخ</span>
+                                <a href="https://www.supermama.me" target="_blank" class="link-btn-pro">
+                                    <span>زيارة الموقع</span>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-10 4v14h14v-7h-2v5H6V9h5V7H4z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="pro-item">
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3 class="item-title">Hellooha</h3>
+                            <div class="item-actions">
+                                <span class="badge">موقع طبخ</span>
+                                <a href="https://www.hellooha.com" target="_blank" class="link-btn-pro">
+                                    <span>زيارة الموقع</span>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-10 4v14h14v-7h-2v5H6V9h5V7H4z" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            </div>
     </main>
-    <footer>
-        <p>موسوعة الصلصات الكلاسيكية &copy; 2026</p>
-    </footer>
 
     <!-- Video Modal -->
     <div id="videoModal" class="modal">
